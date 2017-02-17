@@ -1,0 +1,700 @@
+*2014 NYCHVS SAS IMPORT PRORGRAM;
+
+*OCCUPIED DATA FILE;
+data NAME OF NEW DATASET;  
+infile 'LOCATION OF TEXT FILE\uf_14_occ_web.txt' lrecl=599 truncover;
+input recid $1 @;
+if(recid='1') then
+do;                                            
+        input   @1              recid           $1.
+                                @2              boro            $1.
+                                @3              uf1_1           $1.
+                                @4              uf1_2           $1.
+                                @5              uf1_3           $1.
+                                @6              uf1_4           $1.
+                                @7              uf1_5           $1.
+                                @8              uf1_6           $1.
+                                @9              uf1_7           $1.
+                                @10             uf1_8           $1.
+                                @11             uf1_9           $1.
+                                @12             uf1_10          $1.
+                                @13             uf1_11          $1.
+                                @14             uf1_12          $1.
+                                @15             uf1_13          $1.
+                                @16             uf1_14          $1.
+                                @17             uf1_15          $1.
+                                @18             uf1_16          $1.
+                                @19             uf1_35          $1.
+                                @20             uf1_17          $1.
+                                @21             uf1_18          $1.
+                                @22             uf1_19          $1.
+                                @23             uf1_20          $1.
+                                @24             uf1_21          $1.
+                                @25             uf1_22          $1.
+                                @26             sc23            $1.
+                                @27             sc24            $1.
+                                @28             sc36            $1.
+                                @29             sc37            $1.
+                                @30             sc38            $1.
+                                @31             hhr2            $1.
+                                @32             uf43            $2.
+                                @34             hhr5            $1.
+                                @35             race1           $22.
+                                @57             uf2a            $2.
+                                @59             uf2b            $2.
+                                @61             sc51            $2.
+                                @65             sc52            $4.
+                                @69             sc53            $1.
+                                @70             sc54            $1.
+                                @71             sc110           $2.
+                                @73             sc111           $2.
+                                @75             sc112           $2.
+                                @77             sc113           $2.
+                                @79             sc114           $1.
+                                @80             sc115           $1.
+                                @81             sc116           $1.
+                                @82             sc117           $1.
+                                @83             sc118           $1.
+                                @88             sc120           $1.
+                                @89             sc121           $1.
+                                @98             uf5             $7.
+                                @105            sc125           $1.
+                                @106            uf6             $7.
+                                @113            sc127           $1.
+                                @114            uf7             $5.
+                                @120            sc134           $4.
+                                @124            uf7a            $4.
+                                @128            uf9             $2.
+                                @130            sc140           $1.
+                                @131            sc141           $1.
+                                @132            uf8             $4.
+                                @136            sc143           $1.
+                                @137            sc144           $1.
+                                @138            uf10            $2.
+                                @140            uf48            $2.
+                                @142            sc147           $1.
+                                @143            uf11            $2.
+                                @147            sc149           $1.
+                                @148            sc173           $1.
+                                @149            sc171           $1.
+                                @150            sc150           $1.
+                                @151            sc151           $2.
+                                @153            sc152           $1.
+                                @154            sc153           $1.
+                                @155            sc154           $1.
+                                @156            sc155           $1.
+                                @157            sc156           $1.
+                                @158            sc157           $1.
+                                @159            sc158           $1.
+                                @160            sc159           $1.
+                                @161            uf12            $4.
+                                @165            sc161           $1.
+                                @166            uf13            $4.
+                                @170            uf14            $4.
+                                @174            sc164           $1.
+                                @175            uf15            $4.
+                                @179            sc166           $1.
+                                @180            uf16            $5.
+                                @185            sc174           $1.
+                                @186            uf64            $4.
+                                @191            uf17            $5.
+                                @196            sc181           $1.
+                                @206            sc541           $1.
+                                @207            sc184           $1.
+                                @209            sc542           $1.
+                                @215            sc543           $1.
+                                @216            sc544           $1.
+                                @223            uf17a           $5.
+                                @228            sc185           $1.
+                                @229            sc186           $1.
+                                @230            sc197           $1.
+                                @231            sc198           $1.
+                                @236            sc187           $1.
+                                @237            sc188           $1.     
+                                @238            sc571           $1.
+                                @239            sc189           $1.
+                                @240            sc190           $1.
+                                @241            sc191           $1.
+                                @242            sc192           $1.
+                                @243            sc193           $1.
+                                @244            sc194           $1.
+                                @245            sc196           $1.
+                                @246            sc548           $1.
+                                @247            sc549           $1.
+                                @248            sc550           $1.
+                                @249            sc551           $1.
+                                @250            sc199           $1.
+                                @256            sc575           $1.
+                                @257            sc570           $2.
+                                @259            sc574           $1.
+                                @271            sc560           $1.
+                                @272            uf53            $4.
+                                @276            uf54            $4.
+                                @407            uf19            $1.
+                                @412            new_csr         $2.
+                                @414            rec15           $2.
+                                @416            sc26            $2.
+                                @419            uf23            $2.
+                                @421            rec21           $1.
+                                @422            sc27            $2.
+                                @424            rec1            $2.
+                                @426            uf46            $1.
+                                @427            rec4            $1.
+                                @428            rec_race_a      $1.
+                                @434            rec_race_c      $2.
+                                @436            rec62           $1.
+                                @437            rec64           $1.
+                                @438            rec54           $1.
+                                @439            rec53           $1.
+                                @440            tot_per         $2.
+                                @442            rec28           $3.
+                                @445            uf26            $5.
+                                @450            uf28            $4.
+                                @454            uf27            $4.
+                                @458            rec39           $1.
+                                @459            uf42            $7.
+                                @466            uf42a           $1.
+                                @467            uf34            $7.
+                                @474            uf34a           $1.
+                                @475            uf35            $7.
+                                @482            uf35a           $1.
+                                @483            uf36            $7.
+                                @490            uf36a           $1.
+                                @491            uf37            $7.
+                                @498            uf37a           $1.
+                                @499            uf38            $7.
+                                @506            uf38a           $1.
+                                @507            uf39            $1.
+                                @514            uf39a           $7.
+                                @515            uf40            $7.
+                                @522            uf40a           $1.
+                                @526            cd              $2.
+                                @528            uf30            $4.
+                                @532            uf29            $4.
+                                @536            rec8            $1.
+                                @537            rec7            $1.
+                                @538            fw        comma9.5
+                                @547            chufw           $9.
+                                @556            seqno           $6.
+                                @571            flg_sx1         $1.
+                                @572            flg_ag1         $1.
+                                @573            flg_hs1         $1.
+                                @574            flg_rc1         $1.
+                                @575            hflag2          $1.
+                                @576            hflag1          $1.
+                                @577            hflag13         $1.
+                                @578            hflag6          $1.
+                                @579            hflag3          $1.
+                                @580            hflag14         $1.
+                                @581            hflag16         $1.
+                                @582            hflag7          $1.
+                                @583            hflag9          $1.
+                                @584            hflag10         $1.
+                                @585            hflag91         $1.
+                                @586            hflag11         $1.
+                                @587            hflag12         $1.
+                                @588            hflag4          $1.
+                                @589            hflag18         $1.
+                                @591            uf52h_h         $1.
+                                @592            uf52h_a         $1.
+                                @593            uf52h_b         $1.
+                                @594            uf52h_c         $1.
+                                @595            uf52h_d         $1.
+                                @596            uf52h_e         $1.
+                                @597            uf52h_f         $1.
+                                @598            uf52h_g         $1. ;
+                        end;
+
+label recid='Record Type';
+label boro='Borough';
+label uf1_1='External Walls--Missing brick';
+label uf1_2='External Walls--Sloping walls';
+label uf1_3='External Walls--Major cracks in walls';
+label uf1_4='External Walls--Loose or hanging cornice';
+label uf1_5='External Walls--No problems';
+label uf1_6='External Walls--Unable to observe';
+label uf1_7='Condition of Windows--Broken/missing';
+label uf1_8='Condition of Windows--Rotten/loose';
+label uf1_9='Condition of Windows--Boarded-up';
+label uf1_10='Condition of Windows--No problems';
+label uf1_11='Condition of Windows--Unable to observe';
+label uf1_12='Condition of Stairways--Loose/broken railings';
+label uf1_13='Condition of Stairways--Loose/broken steps';
+label uf1_14='Condition of Stairways--No problems';
+label uf1_15='Condition of Stairways--No interior steps';
+label uf1_16='Condition of Stairways--No exterior steps';
+label uf1_35='Condition of Stairways--Unable to observe';
+label uf1_17='Condition of Floors--Sagging/sloping';
+label uf1_18='Condition of Floors--Slanted doors';
+label uf1_19='Condition of Floors--Deep wear';
+label uf1_20='Condition of Floors--Holes/missing flooring';
+label uf1_21='Condition of Floors--None of these problems';
+label uf1_22='Condition of Floors--Unable to observe';
+label sc23='Condition of building';
+label sc24='Broken/Boarded Windows--observation';
+label sc36='Wheelchair accessibility--Street entry';
+label sc37='Wheelchair accessibility--Elevator';
+label sc38='Wheelchair accessibility--Unit entrance';
+label hhr2='Sex of householder';
+label hhr3='Age of householder';
+label hhr5='Hispanic origin';
+label race1='Race of householder';
+label uf2a='Temporary Residence-Affordability';
+label uf2b='Temporary Residence-Other';
+label sc51='Most recent place lived';
+label uf66='Year Householder Moved into Unit Recode';
+label sc53='On or after July 1, 1971';
+label sc54='First occupants of unit';
+label sc110='Reason for moving';
+label sc111='Place of birth-householder';
+label sc112='Place of birth-father';
+label sc113='Place of birth-mother';
+label sc114='Coop/condo status';
+label sc115='Tenure(1)';
+label sc116='Tenure(2)';
+label sc117='Lived in unit at time of coop/condo conversion';
+label sc118='Coop/condo conv. through a non-eviction plan';
+label sc120='Occupancy status before acquisition';
+label sc121='Condo/Coop before acquisition';
+label uf5='Down payment(1)';
+label sc125='Down payment(2)';
+label uf6='Value';
+label sc127='Mortgage status';
+label uf7='Monthly mortgage';
+label sc134='When Did Most Recent Mortgage Originate';
+label uf7a='Current Interest Rate';
+label uf9='Condo/Maintenance fees';
+label sc140='Senior Citizen Carrying Charge Increase Exemption';
+label sc141='Fire and liability insurance paid separately';
+label uf8='Fire and liability insurance';
+label sc143='Fire and liability on personal possessions';
+label sc144='Real estate taxes paid separately';
+label uf10='2013 real estate taxes';
+label uf48='Units in building';
+label sc147='Owner in building';
+label uf11='Stories in building';
+label sc149='Elevator in building';
+label sc173='Sidewalk to elevator';
+label sc171='Sidewalk to unit';
+label sc150='Number of rooms';
+label sc151='Number of bedrooms';
+label sc152='Complete plumbing facilities';
+label sc153='Exclusive use of plumbing facilities';
+label sc154='Toilet breakdown';
+label sc155='Complete kitchen facilities';
+label sc156='Exclusive use of kitchen facilities';
+label sc157='Kitchen facilities functioning';
+label sc158='Type of heating fuel';
+label sc159='Electricity-paid separately';
+label uf12='Monthly electricity cost';
+label sc161='Gas-paid separately';
+label uf13='Monthly gas cost';
+label uf14='Combined gas/electricity';
+label sc164='Water and sewer-paid separately';
+label uf15='Yearly water and sewer cost';
+label sc166='Other fuels-paid separately';
+label uf16='Yearly cost for other fuels';
+label sc174='Home Energy Assistance';
+label uf64='Yearly assistance amount';
+label uf17='Contract rent';
+label sc181='Length of lease';
+label uf17b_1='Federal section 8';
+label uf17b_2='Senior citizen rent increase';
+label uf17b_3='Public assistance shelter allowance';
+label uf17b_4='Another federal housing subsidy program';
+label uf17b_5='Another state/city housing program';
+label uf17a='Out of pocket rent';
+label sc185='Heating equipment breakdown';
+label sc186='Number of heating breakdowns';
+label sc197='Functioning Air Conditioning';
+label sc198='Carbon Monoxide Detector';
+label sc187='Additional sources of heat';
+label sc188='Presence of mice and rates';
+label sc571='Number of Cockroaches';
+label sc189='Exterminator service';
+label sc190='Cracks/holes in interior walls';
+label sc191='Holes in floors';
+label sc192='Broken plaster/peeling paint';
+label sc193='Plaster/paint> 8.5 x 11';
+label sc194='Water leakage';
+label sc196='Respondent rating of structures in neighborhood';
+label sc548='TANF or Family Assistance';
+label sc549='Safety Net';
+label sc550='SSI';
+label sc551='Other';
+label sc199='Musty/Moldy Smells';
+label sc575='Land-line Telephone in House';
+label sc570='Adults with Cell Phone';
+label sc574='General Health (respondent)';
+label sc560='Moved to the US as immigrant';
+label uf53='Year moved to US as immigrant';
+label uf54='Year moved to NYC';
+label uf19='DHCR status input flag';
+label new_csr='New control status recode';
+label rec15='Structure class recode';
+label sc26='Type of schedule code';
+label uf23='Year built recode';
+label rec21='Condition of unit recode';
+label sc27='Respondent line number';
+label rec1='Household composition recode';
+label uf46='Presence of nonrelatives';
+label rec4='Race and Ethnicity of householder';
+label rec_race_a='Race Recode 1';
+label rec_race_c='Race Recode 2';
+label rec62='Presence of plumbing facilities recode';
+label rec64='Presence of kitchen facilities recode';
+label rec54='Number of 1987 maintenance deficiencies';
+label rec53='Number of 2014 maintenance deficiencies';
+label tot_per='Total persons recode';
+label ppr='Persons per room';
+label uf26='Monthly gross rent';
+label uf28='Monthly gross rent per room recode';
+label uf27='Monthly contract rent per room recode';
+label rec39='Household below poverty';
+label uf42='Household income recode';
+label uf42a='Household income flag';
+label uf34='Salary';
+label uf34a='Salary flag';
+label uf35='Business income';
+label uf35a='Business income flag';
+label uf36='Interest income';
+label uf36a='Interest income flag';
+label uf37='Retirement income (1)';
+label uf37a='Retirement income (1) flag';
+label uf38='Government income';
+label uf38a='Government income flag';
+label uf39='Retirement income (2)';
+label uf39a='Retirement income (2) flag';
+label uf40='Other income';
+label uf40a='Other income flag';
+label cd='Sub-borough area';
+label uf30='Gross rent/income ratio';
+label uf29='Contract rent/income ratio';
+label rec8='Household members under 6';
+label rec7='Household members under 18';
+label fw='Household weight';
+label chufw='Final household weight';
+label seqno='Sequence number';
+label flg_sx1='Sex of householder';
+label flg_ag1='Age of householder';
+label flg_hs1='Hispanic Origin';
+label flg_rc1='Race of householder';
+label hflag2='Year moved--renters';
+label hflag1='Year moved--owners/renters';
+label hflag13='Value';
+label hflag6='Stories in building';
+label hflag3='Rooms/Bedrooms';
+label hflag14='Plumbing facilities';
+label hflag16='Kitchen facilities';
+label hflag7='Type of heating fuel';
+label hflag9='Electricity cost';
+label hflag10='Gas cost';
+label hflag91='Combined gas/electricity cost';
+label hflag11='Water and sewer cost';
+label hflag12='Other fuels cost';
+label hflag4='Contract rent';
+label hflag18='Rental assistance';
+label uf52h_h='Household income';
+label uf52h_a='Salary income';
+label uf52h_b='Business income';
+label uf52h_c='Interest income';
+label uf52h_d='Retirement income(1)';
+label uf52h_e='Government income';
+label uf52h_f='Retirement income(2)';
+label uf52h_g='Other income';
+run;
+
+*PERSONS DATA FILE;
+data NAME OF NEW DATASET;  
+infile 'LOCATION OF TEXT FILE\uf_14_pers_web.txt'  lrecl=173 truncover;
+input recid $1 @;
+if(recid='2') then
+do;                                            
+        input   @1              recid           $1.                              
+                                @2              boro            $1.
+                                @3              person          $2.
+                                @5              sex             $1.
+                                @6              uf43            $2.
+                                @8              relation        $2.
+                                @10             hspanic         $1.
+                                @11             race            $22.
+                                @33             spouse          $2.
+                                @35             parent1         $2.
+                                @37             parent2         $2.
+                                @39             uf3             $1.
+                                @40             item40a         $1.
+                                @41             item40b         $2.
+                                @43             item41          $1.
+                                @44             item42          $1.
+                                @45             item43          $2.
+                                @47             item44          $1.
+                                @48             item45c         $1.
+                                @49             item46a         $4.
+                                @53             item46b         $4.
+                                @57             item47          $1.
+                                @58             item48a         $2.
+                                @60             item48b         $2.
+                                @63             uf18            $6.
+                                @76             uf18a           $6.
+                                @83             uf18b           $6.
+                                @89             uf18c           $6.
+                                @95             uf18d           $6.
+                                @101            uf18e           $6.
+                                @107            uf18f           $6.
+                                @113            item50a         $1.
+                                @114            eductn          $2.     
+                                @116            uf41            $7.
+                                @123            uf41a           $1.
+                                @124            uf44            $1.
+                                @125            uf45            $1.
+                                @126            lfs             $1.
+                                @127            chk_g           $1.
+                                @128            rec83           $1.
+                                @129            rec_race_a      $1.
+                                @130            rec_race_c      $2.
+                                @132            pw              comma9.5
+                                @141            seqno           $6.
+                                @147            cd              $2.
+                                @149            flg_sx          $1.
+                                @150            flg_ag          $1.
+                                @151            flg_hs          $1.
+                                @152            flg_rc          $1.
+                                @153            a1a40a          $1.
+                                @154            a1a40b          $1.
+                                @155            a1a41           $1.
+                                @156            a1a42           $1.
+                                @157            a1a43           $1.
+                                @158            a1b44           $1.
+                                @159            a1b45c          $1.
+                                @160            a1b46a          $1.
+                                @161            a1b46b          $1.
+                                @162            a1b47           $1.
+                                @163            a1b48a          $1.
+                                @164            a1b48b          $1.
+                                @165            a2salary        $1.
+                                @166            a2businc        $1.
+                                @167            aintinc         $1.
+                                @168            aret1inc        $1.
+                                @169            agovtinc        $1.
+                                @170            aret2inc        $1.
+                                @171            aothinc         $1.
+                                @172            flg_educ        $1. ;
+                        end;     
+
+label recid='Record Type';
+label boro='Borough';
+label person='Person number';
+label sex='Sex';
+label uf43='Age';
+label relation='Relationship to householder';
+label hspanic='Hispanic Origin';
+label race='Race';
+label spouse='Person number of Spouse';
+label Parent1='Person number of 1st parent';
+label Parent2='Person number of 2nd parent';
+label uf3='Person from temporary residence';
+label item40a='Worked last week';
+label item40b='Hours worked last week';
+label item41='Temporarily Absent/Layoff';
+label item42='Looking for work';
+label item43='Reason not looking for work';
+label item44='Last time worked';
+label item45c='Major Industry type';
+label item46a='Industry';
+label item46b='Occupation';
+label item47='Type of worker';
+label item48a='Weeks worked in 2013';
+label item48b='Hours worked in 2013';
+label uf18='Salary income';
+label uf18a='Business income';
+label uf18b='Interest income';
+label uf18c='Retirement(1) income';
+label uf18d='Government income';
+label uf18e='Retirement(2) income';
+label uf18f='Other income';
+label item50a='Current Enrollment in Job Training/Education';
+label eductn='Educational Attainment';
+label uf41='Total person income';
+label uf41a='Person income flag';
+label uf44='Business income loss flag';
+label uf45='Interest income loss flag';
+label lfs='Labor force status recode';
+label chk_g='Check item g';
+label rec83='Race and Ethnicity';
+label rec_race_a='Race Recode 1';
+label rec_race_c='Race Recode 2';
+label pw='Person weight';
+label seqno='Sequence number';
+label cd='Sub-borough Area';
+label flg_sx='Sex allocation flag';
+label flg_ag='Age allocation flag';
+label flg_hs='Hispanic origin flag';
+label flg_rc='Race allocation flag';
+label a1a40a='Worked last week flag';
+label a1a40b='Hours worked last week flag';
+label a1a41='Temporary absent/layoff flag';
+label a1a42='Looking for work flag';
+label a1a43='Reason not looking flag';
+label a1b44='Last time worked flag';
+label a1b45c='Major industry flag';
+label a1b46a='Industry flag';
+label a1b46b='Occupation flag';
+label a1b47='Type of worker flag';
+label a1b48a='Weeks worked in 2013 flag';
+label a1b48b='Hours worked in 2013 flag';
+label a2salary='Salary flag';
+label a2businc='Business income flag';
+label aintinc='Interest income flag';
+label aret1inc='Retirement(1) income flag';
+label agovtinc='Government income flag';
+label aret2inc='Retirement(2) income flag';
+label aothinc='Other income flag';
+label flg_educ='Education flag';
+run;
+
+*VACANT DATA FILE;
+data NAME OF NEW DATASET;  
+infile 'LOCATION OF TEXT FILE\uf_14_vac_web.txt' lrecl=108 truncover;
+input recid $1 @;
+if(recid='3') then
+do;                                            
+        input   
+                                @1              recid           $1.
+                                @2              boro            $1.
+                                @3              uf1_1           $1.
+                                @4              uf1_2           $1.
+                                @5              uf1_3           $1.
+                                @6              uf1_4           $1.
+                                @7              uf1_5           $1.
+                                @8              uf1_6           $1.
+                                @9              uf1_7           $1.
+                                @10             uf1_8           $1.
+                                @11             uf1_9           $1.
+                                @12             uf1_10          $1.
+                                @13             uf1_11          $1.
+                                @14             uf1_12          $1.
+                                @15             uf1_13          $1.
+                                @16             uf1_14          $1.
+                                @17             uf1_15          $1.
+                                @18             uf1_16          $1.
+                                @19             uf1_35          $1.
+                                @20             uf1_17          $1.
+                                @21             uf1_18          $1.
+                                @22             uf1_19          $1.
+                                @23             uf1_20          $1.
+                                @24             uf1_21          $1.
+                                @25             uf1_22          $1.
+                                @26             sc23            $1.
+                                @27             sc24            $1.
+                                @28             sc36            $1.
+                                @29             sc37            $1.
+                                @30             sc38            $1.
+                                @31             sc30            $1.
+                                @32             sc518           $1.
+                                @33             uf49            $2.
+                                @35             sc520           $1.
+                                @36             uf33            $2.
+                                @38             uf51            $2.
+                                @40             sc522           $1.
+                                @41             sc553           $1.
+                                @42             sc555           $1.
+                                @43             sc523           $1.
+                                @44             sc524           $2.
+                                @46             sc525           $1.
+                                @47             sc526           $1.
+                                @48             sc527           $1.
+                                @49             sc528           $1.
+                                @50             sc529           $1.
+                                @51             sc530           $1.
+                                @52             sc531           $1.
+                                @53             sc532           $1.
+                                @54             sc533           $1.
+                                @55             sc534           $1.
+                                @56             sc535           $2.
+                                @58             uf31            $5.
+                                @63             uf19            $1.
+                                @68             new_csr         $2.
+                                @70             nusc            $2.
+                                @72             sc26            $2.
+                                @75             uf23            $2.
+                                @77             rec62           $1.
+                                @78             rec64           $1.
+                                @79             uf32            $4.
+                                @84             rec21           $1.
+                                @85             cd              $2.
+                                @87             seqno           $6.
+                                @93             fw              comma9.5
+                                @102            hflag6          $1.
+                                @103            hflag3          $1.
+                                @104            hflag15         $1.
+                                @105            hflag17         $1.
+                                @106            hflag8          $1.
+                                @107            hflag5          $1.; 
+                                end;
+
+label recid='Record Type';
+label boro='Borough';
+label uf1_1='External Walls--Missing brick';
+label uf1_2='External Walls--Sloping walls';
+label uf1_3='External Walls--Major cracks in walls';
+label uf1_4='External Walls--Loose or hanging cornice';
+label uf1_5='External Walls--No problems';
+label uf1_6='External Walls--Unable to observe';
+label uf1_7='Condition of Windows--Broken/missing';
+label uf1_8='Condition of Windows--Rotten/loose';
+label uf1_9='Condition of Windows--Boarded-up';
+label uf1_10='Condition of Windows--No problems';
+label uf1_11='Condition of Windows--Unable to observe';
+label uf1_12='Condition of Stairways--Loose/broken railings';
+label uf1_13='Condition of Stairways--Loose/broken steps';
+label uf1_14='Condition of Stairways--No problems';
+label uf1_15='Condition of Stairways--No interior steps';
+label uf1_16='Condition of Stairways--No exterior steps';
+label uf1_35='Condition of Stairways--Unable to observe';
+label uf1_17='Condition of Floors--Sagging/sloping';
+label uf1_18='Condition of Floors--Slanted doors';
+label uf1_19='Condition of Floors--Deep wear';
+label uf1_20='Condition of Floors--Holes/missing flooring';
+label uf1_21='Condition of Floors--None of these problems';
+label uf1_22='Condition of Floors--Unable to observe';
+label sc23='Condition of building';
+label sc24='Broken/Boarded Windows--observation';
+label sc36='Wheelchair accessibility--Street entry';
+label sc37='Wheelchair accessibility--Elevator';
+label sc38='Wheelchair accessibility--Unit entrance';
+label sc30='Vacant unit respondent';
+label sc518='First occupancy';
+label uf49='Number of units in building';
+label sc520='Owner in building';
+label uf33='Stories in building';
+label uf51='Floor of unit';
+label sc522='Elevator in building';
+label sc553='Sidewalk to elevator';
+label sc555='Sidewalk to unit';
+label sc523='Number of Rooms';
+label sc524='Number of Bedrooms';
+label sc525='Complete plumbing facilities';
+label sc526='Exclusive plumbing use';
+label sc527='Kitchen facilities';
+label sc528='Exclusive kitchen use';
+label sc529='Type of Heating Fuel';
+label sc530='Condo/Coop Status';
+label sc531='Duration of Vacancy';
+label sc532='Status Prior to Vacancy';
+label sc533='Condo/Coop Status Before Vacancy';
+label sc534='Status of Vacant Unit';
+label sc535='Reason Unit Not Available for Rent/Sale';
+label uf31='Monthly Asking Rent';
+label uf19='DHCR Status Input Flag';
+label new_csr='New Control Status Recode';
+label nusc='Structure Class Recode';
+label sc26='Type of Schedule';
+label uf23='Year Built Recode';
+label rec62='Plumbing Facilities Recode';
+label rec64='Kitchen Facilities Recode';
+label uf32='Rent per Room Recode';
+label rec21='Condition of Building';
+label cd='Sub-borough Area';
+label seqno='Sequence Number';
+label fw='Final Housing Unit Weight';
+run;
